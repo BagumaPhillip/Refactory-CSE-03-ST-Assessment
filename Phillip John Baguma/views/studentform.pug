@@ -1,0 +1,102 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Student Registration
+  link(rel='stylesheet' href='/css/styles.css')
+main
+  #border
+    #logo
+      img(src='/images/1. Form on load.PNG' alt='clarke')
+    #form
+      form(action='/register' onsubmit='return validateForm()' method='POST')
+        h3 STUDENT APPLICATION FORM
+        label(for='firstName')
+            | First Name
+            span.redstar *
+        input#firstName(type='text' name='firstName')
+        br
+        small#firstNameError.error
+        br
+        label(for='lastName')
+            | Last Name
+            span.redstar *
+        input#lastName(type='text' name='lastName')
+        br
+        small#lastNameError.error
+        br
+        label(for='course')
+            | Course
+            span.redstar *
+        select#course(name='course')
+            option(value='') --Select--
+            option(value='Cetificate in Health Science') Cetificate in Health Science
+            option(value='Certificate in Applied Technology') Certificate in Applied Technology
+            option(value='Bachelor of Information Technology') Bachelor of Information Technology
+            option(value='Bachelors in Business Technology') Bachelors in Business Technology
+            option(value='Master of Public Health') Male
+        br
+        small#courseError.error
+        br
+        label(for='entryScheme')
+            | Entry Scheme
+            span.redstar *
+        select#entryScheme(name='entryScheme')
+            option(value='') --Select--
+            option(value='A-Level certificate') A-Level certificate
+            option(value='Adult/Mature Learning') Adult/Mature Learning
+            option(value='Certificate') Certificate
+            option(value='Diploma') Diploma
+            option(value='Bachelors') Bachelors
+        br
+        small#entryError.error
+        br
+        label(for='intake')
+            | Intake
+            span.redstar *
+        select#intake(name='intake')
+            option(value='') --Select--
+            option(value='January Intake') January Intake
+            option(value='May Intake') FMay Intake
+            option(value='August Intake') August Intake
+        br
+        small#intakeError.error
+        br
+        label(for='sponsorship')
+            | Sponsorship
+            span.redstar *
+        select#sponsorship(name='sponsorship')
+            option(value='') --Select--
+            option(value='Private') Private
+            option(value='Government') Government
+            option(value='Bursary') Bursary
+        br
+        small#sponsorError.error
+        br
+        label#gender(for='gender' name='gender')
+            | Gender
+            span.redstar *
+        .toggle
+            label
+            input(type='radio' name='gender' value='male')
+            | Male
+            label
+            input(type='radio' name='gender' value='female')
+            | Female
+        br
+        label(for='date')
+            | Date of Birth
+            span.redstar *
+        input#date(type='date' name='date')
+        br
+        small#dateError.error
+        br
+        label(for='residence')
+            | Residence
+            span.redstar *
+        input#residence(type='text' name='residence')
+        br
+        small#residenceError.error
+        br
+        button SUBMIT
+    script(src='/js/scripts.js')

@@ -1,0 +1,39 @@
+#border {
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px black;
+    border-radius: 5px;
+    /* align-items: center; */
+}
+
+#logo {
+    background-image: url('/public/images/1. Form on load.PNG');
+    width: 50%;
+}
+
+#form{
+    width: 50%;
+}
+
+.redstar{
+    color: red;
+}
+
+button{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: RGB(12, 95, 82);
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+input[type="text"], select{
+    border-color: green ;
+    padding: 5px;
+    width: 50%;
+    margin-left: 20px;
+}
+
+body, input, button{
+    font-family:  'Agency FB',Tahoma, Arial, 'Calibri';
+}

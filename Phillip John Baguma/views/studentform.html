@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="/public/css/styles.css" />
+</head>
+<body>
+    <main>
+    <div id="border">
+        <div id="logo">
+            <img src="/public/images/1. Form on load.PNG" alt="clarke">
+        </div>
+        <div id="form">
+            <form action="/register" method="POST" onsubmit="return validateForm()"></form>
+            <h3>STUDENT APPLICATION FORM</h3>
+           <label for="firstName">First Name<span class="redstar">*</span></label>
+           <input type="text" id="firstName" name="firstName">
+           <small  class="error" id="firstNameError"></small>
+           <label for="lastName">Last Name<span class="redstar">*</span></label>
+           <input type="text" id="lastName" name="lastName">
+           <small class="error" id="lastNameError"></small> 
+           <label for="course">Course<span class="redstar">*</span></label>
+           <select name="course" id="course">
+            <option value="">--Select--</option>
+            <option value="Cetificate in Health Science">Cetificate in Health Science</option>
+            <option value="Certificate in Applied Technology">Certificate in Applied Technology</option>
+            <option value="Bachelor of Information Technology">Bachelor of Information Technology</option>
+            <option value="Bachelors in Business Technology">Bachelors in Business Technology</option>
+            <option value="Master of Public Health">Male</option>
+           </select>
+           <small class="error" id="courseError"></small>
+           <label for="entryScheme">Entry Scheme<span class="redstar">*</span></label>
+           <select name="entryScheme" id="entryScheme">
+            <option value="">--Select--</option>
+            <option value="A-Level certificate">A-Level certificate</option>
+            <option value="Adult/Mature Learning">Adult/Mature Learning</option>
+            <option value="Certificate">Certificate</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Bachelors">Bachelors</option>
+           </select>
+           <small class="error" id="entryError"></small> 
+           <label for="intake">Intake<span class="redstar">*</span></label>
+           <select name="intake" id="intake">
+            <option value="">--Select--</option>
+            <option value="January Intake">January Intake</option>
+            <option value="May Intake">FMay Intake</option>
+            <option value="August Intake">August Intake</option>
+           </select> 
+           <small class="error" id="intakeError"></small>
+           <label for="sponsorship">Sponsorship<span class="redstar">*</span></label>
+           <select name="sponsorship" id="sponsorship">
+            <option value="">--Select--</option>
+            <option value="Private">Private</option>
+            <option value="Government">Government</option>
+            <option value="Bursary">Bursary</option>
+            </select>
+           <small class="error" id="sponsorError"></small>
+           <label for="gender" id="gender" name="gender">Gender<span class="redstar">*</span></label>
+           <div class="toggle">
+            <label>
+                <input type="radio" name="gender" value="male">
+                Male
+            </label> 
+            <label>
+                <input type="radio" name="gender" value="female">
+                Female
+            </label>
+        </div>
+        <label for="date">Date of Birth<span class="redstar">*</span></label>
+           <input type="date" id="date" name="date">
+           <small class="error" id="dateError"></small>
+           <label for="residence">Residence<span class="redstar">*</span></label>
+           <input type="text" id="residence" name="residence">
+           <small class="error" id="residenceError"></small>
+           <button>SUBMIT</button>
+        </form>
+        </div>
+    </div>
+    </main>
+   <script src="/public/js/scripts.js"></script>
+</body>
+</html>
